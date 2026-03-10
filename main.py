@@ -29,4 +29,6 @@ tup1 = (3, 6, 10, 20, 56)
 
 print(input_until_lucky(tup1))
 
+##
+
 
