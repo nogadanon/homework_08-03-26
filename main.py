@@ -15,12 +15,12 @@ print(get_lucky_numbers(5))
 def input_until_lucky(lucky_numbers: tuple) -> int:
     i = 0
     while True:
-        guess = input('guess a lucky number: ')
-        if not guess.isdigit():
-            print('invalid input')
-            continue
-        else:
+        try:
+            guess = int(input('guess a lucky number: '))
             i += 1
+        except ValueError:
+            print('invalid input. try again')
+            continue
         if int(guess) in lucky_numbers:
             return i
 
