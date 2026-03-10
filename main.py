@@ -21,7 +21,7 @@ def input_until_lucky(lucky_numbers: tuple) -> int:
         except ValueError:
             print('invalid input. try again')
             continue
-        if int(guess) in lucky_numbers:
+        if guess in lucky_numbers:
             return i
 
 
